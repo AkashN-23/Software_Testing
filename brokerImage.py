@@ -18,6 +18,7 @@ try:
         image_url = image.get_attribute("src")
         if image_url :
             response = requests.get(image_url)
+            print(response.status_code)
 
             if response.status_code == 200 :
                 print(f"Good image {image_url}")
